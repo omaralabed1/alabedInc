@@ -18,23 +18,24 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
         }
 
         .presentation-container {
-            width: 100%;
-            max-width: 1200px;
+            width: 100vw;
+            height: 100vh;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 0;
+            box-shadow: none;
             overflow: hidden;
-            border: 3px solid #DC143C;
+            border: none;
         }
 
         .slide {
             display: none;
-            padding: 60px;
-            min-height: 600px;
+            padding: 80px;
+            min-height: calc(100vh - 160px);
             position: relative;
             animation: slideIn 0.5s ease-in-out;
         }
@@ -202,10 +203,10 @@
         }
 
         .logo {
-            max-height: 120px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid #DC143C;
+            max-height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            border: 3px solid #DC143C;
         }
 
         .phase-card {
