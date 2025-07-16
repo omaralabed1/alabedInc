@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fff8dc 0%, #f0e68c 100%);
+            background: linear-gradient(135deg, #DC143C 0%, #B22222 50%, #8B0000 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,6 +28,7 @@
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
+            border: 3px solid #DC143C;
         }
 
         .slide {
@@ -49,7 +50,7 @@
 
         .slide h1 {
             font-size: 2.5em;
-            color: #2c2c2c;
+            color: #DC143C;
             margin-bottom: 30px;
             text-align: center;
             position: relative;
@@ -63,21 +64,21 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, #daa520, #ffd700);
+            background: linear-gradient(90deg, #DC143C, #FFD700);
             border-radius: 2px;
         }
 
         .slide h2 {
             font-size: 2em;
-            color: #444;
+            color: #DC143C;
             margin-bottom: 25px;
-            border-left: 5px solid #daa520;
+            border-left: 5px solid #DC143C;
             padding-left: 20px;
         }
 
         .slide h3 {
             font-size: 1.4em;
-            color: #2c2c2c;
+            color: #DC143C;
             margin-bottom: 15px;
             margin-top: 25px;
         }
@@ -85,7 +86,7 @@
         .slide p {
             font-size: 1.1em;
             line-height: 1.6;
-            color: #555;
+            color: #333;
             margin-bottom: 20px;
         }
 
@@ -97,14 +98,14 @@
         .slide li {
             font-size: 1.1em;
             line-height: 1.6;
-            color: #555;
+            color: #333;
             margin-bottom: 10px;
             position: relative;
         }
 
         .slide li::before {
             content: '→';
-            color: #daa520;
+            color: #DC143C;
             font-weight: bold;
             position: absolute;
             left: -20px;
@@ -122,7 +123,7 @@
 
         .btn {
             padding: 12px 24px;
-            background: linear-gradient(45deg, #daa520, #ffd700);
+            background: linear-gradient(45deg, #DC143C, #FFD700);
             color: white;
             border: none;
             border-radius: 25px;
@@ -130,11 +131,13 @@
             font-size: 1em;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
         }
 
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #B22222, #DAA520);
         }
 
         .btn:disabled {
@@ -147,20 +150,22 @@
             position: fixed;
             top: 30px;
             right: 30px;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.95);
             padding: 10px 20px;
             border-radius: 20px;
             font-weight: bold;
-            color: #2c2c2c;
+            color: #DC143C;
             backdrop-filter: blur(10px);
+            border: 2px solid #DC143C;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, #fdf5e6, #fffaf0);
-            border-left: 5px solid #daa520;
+            background: linear-gradient(135deg, #FFF5F5, #FFEBEE);
+            border-left: 5px solid #DC143C;
             padding: 20px;
             margin: 20px 0;
             border-radius: 10px;
+            border: 1px solid #DC143C;
         }
 
         .two-column {
@@ -177,28 +182,45 @@
 
         .company-header h1 {
             font-size: 2.2em;
-            color: #2c2c2c;
+            color: #DC143C;
             margin-bottom: 10px;
         }
 
         .company-header p {
             font-size: 1.2em;
-            color: #b8860b;
+            color: #DC143C;
             font-weight: 500;
         }
 
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            max-height: 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #DC143C;
+        }
+
         .phase-card {
-            background: white;
-            border: 2px solid #e9ecef;
+            background: linear-gradient(135deg, #FFF5F5, #FFEBEE);
+            border: 2px solid #DC143C;
             border-radius: 15px;
             padding: 30px;
             margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(220, 20, 60, 0.2);
             transition: transform 0.3s ease;
         }
 
         .phase-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3);
         }
 
         .benefits-grid {
@@ -209,21 +231,33 @@
         }
 
         .benefit-item {
-            background: linear-gradient(135deg, #fff, #fdf5e6);
+            background: linear-gradient(135deg, #FFF5F5, #FFEBEE);
             padding: 20px;
             border-radius: 10px;
-            border-left: 4px solid #daa520;
+            border-left: 4px solid #DC143C;
+            border: 1px solid #DC143C;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(220, 20, 60, 0.2);
         }
 
         .benefit-item h4 {
-            color: #2c2c2c;
+            color: #DC143C;
             margin-bottom: 10px;
             font-size: 1.1em;
         }
 
         .benefit-item p {
             font-size: 0.95em;
-            color: #666;
+            color: #333;
+        }
+
+        .partnership-text {
+            color: #DC143C;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -239,19 +273,192 @@
                 <h1>Strategic Collaboration Proposal</h1>
                 <p>Karam Brand U.S. Market Entry & Expansion</p>
             </div>
+            
+            <div class="logos-container">
+                <img src="https://raw.githubusercontent.com/omaralabed1/alabedInc/main/karam_logo.png" alt="Karam Logo" class="logo">
+                <img src="https://raw.githubusercontent.com/omaralabed1/alabedInc/main/ba27d0a2-2642-402d-a71d-d84082e7a168.JPG" alt="Al Abed Inc Logo" class="logo">
+            </div>
+            
             <div style="text-align: center; margin-top: 40px;">
-                <img src="https://raw.githubusercontent.com/omaralabed1/alabedInc/main/karam_logo.png" alt="Karam Logo" style="max-height: 120px; margin: 10px;">
-                <img src="https://raw.githubusercontent.com/omaralabed1/alabedInc/main/ba27d0a2-2642-402d-a71d-d84082e7a168.JPG" alt="Al Abed Logo" style="max-height: 120px; margin: 10px;">
+                <h2 style="border: none; padding: 0;">Al Abed Inc. × Zamzam Manufacturing Company</h2>
+                <p style="font-size: 1.3em; color: #DAA520; margin-top: 30px;" class="partnership-text">Partnering for Success in the U.S. Middle Eastern Food Market</p>
             </div>
             <div style="text-align: center; margin-top: 60px;">
-                <h2 style="border: none; padding: 0;">Al Abed Inc. × Zamzam Manufacturing Company</h2>
-                <p style="font-size: 1.3em; color: #b8860b; margin-top: 30px;">Partnering for Success in the U.S. Middle Eastern Food Market</p>
-            </div>
-            <div style="text-align: center; margin-top: 80px;">
-                <p style="font-size: 1.1em; color: #888;">Presented by: Abdallah Al Abed, Founder & CEO, Al Abed Inc.</p>
+                <p style="font-size: 1.1em; color: #666;">Presented by: Abdallah Al Abed, Founder & CEO, Al Abed Inc.</p>
             </div>
         </div>
-        <!-- The remaining slides (2-8) are unchanged -->
+
+        <!-- Slide 2: Executive Summary -->
+        <div class="slide">
+            <h1>Executive Summary</h1>
+            <div class="highlight-box">
+                <h3>Opportunity Identified</h3>
+                <p>High-potential collaboration to introduce and scale Karam brand sales effectively across the U.S. market through strategic partnership with Al Abed Inc.</p>
+            </div>
+            
+            <h3>Key Benefits</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>Risk Reduction</h4>
+                    <p>Minimize market entry risks through local expertise and infrastructure</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Brand Recognition</h4>
+                    <p>Accelerate brand awareness and consumer adoption</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Profitability</h4>
+                    <p>Optimize revenue through strategic pricing and distribution</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Local Presence</h4>
+                    <p>Establish trusted U.S. representation for long-term growth</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Market Challenges -->
+        <div class="slide">
+            <h1>U.S. Market Realities & Challenges</h1>
+            <p style="font-style: italic; color: #DC143C; margin-bottom: 30px;">Based on research and participation in Global Food Expo (New Jersey) and Fancy Food Show (New York)</p>
+            
+            <div class="two-column">
+                <div>
+                    <h3>🎯 Brand Awareness Challenge</h3>
+                    <p>Strong consumer loyalty to established brands like Ziyad Brothers requires active and consistent brand-building strategies</p>
+                    
+                    <h3>💰 Price & Positioning</h3>
+                    <p>Critical balance between high quality and competitive pricing to drive distributor interest and consumer adoption</p>
+                </div>
+                <div>
+                    <h3>🤝 Trust & Partnership</h3>
+                    <p>U.S. distributors and retailers prefer brands with local representation for streamlined communication and compliance</p>
+                    
+                    <h3>⚡ Market Responsiveness</h3>
+                    <p>Need for real-time adjustment to pricing, promotions, and market trends</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Phase 1 Overview -->
+        <div class="slide">
+            <h1>Phase 1: U.S. Regional Office</h1>
+            <div class="phase-card">
+                <h2>Objective</h2>
+                <p>Establish foundation for Karam's successful U.S. market presence by building trust, ensuring compliance, and accelerating brand visibility</p>
+            </div>
+            
+            <h2>Why a Regional Office?</h2>
+            <div class="highlight-box">
+                <p><strong>Strategic Investment, Not a Cost</strong> - Improves responsiveness, market feedback, and brand presence</p>
+            </div>
+            
+            <p>Without local representation, manufacturers risk missing key opportunities to adjust pricing, launch promotions, and act on market trends in real time.</p>
+        </div>
+
+        <!-- Slide 5: Phase 1 Benefits -->
+        <div class="slide">
+            <h1>Regional Office Benefits</h1>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>📋 Regulatory & Compliance</h4>
+                    <p>Handle FDA approvals, U.S. customs clearance, and regulatory processes</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📢 Market Representation</h4>
+                    <p>Coordinate in-store tastings, events, and promotional campaigns</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🤝 Relationship Management</h4>
+                    <p>Ongoing support for distributors and retailers to strengthen loyalty</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📊 Market Intelligence</h4>
+                    <p>Real-time feedback on pricing, placement, and competitor movements</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Phase 2 Overview -->
+        <div class="slide">
+            <h1>Phase 2: Warehousing & Distribution</h1>
+            <div class="phase-card">
+                <h2>Objective</h2>
+                <p>Support market entry through flexible inventory management and mixed pallet distribution tailored for mid-sized distributors and independent retailers</p>
+            </div>
+            
+            <h2>Mixed Pallet Strategy</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Target Market</h3>
+                    <ul>
+                        <li>Mid-sized distributors</li>
+                        <li>Independent retailers</li>
+                        <li>Grocery store owners</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Inventory Model</h3>
+                    <ul>
+                        <li>1-2 month container stock</li>
+                        <li>Flexible order quantities</li>
+                        <li>Customized mixed pallets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Strategic Advantages -->
+        <div class="slide">
+            <h1>Mixed Pallet Strategic Advantages</h1>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>🚀 Lower Entry Barriers</h4>
+                    <p>Manageable, customized orders reduce risk and increase willingness to try Karam brand</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🗺️ Market Penetration</h4>
+                    <p>Introduce Karam in new geographic regions where full container demand isn't established</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>💹 Enhanced Pricing Control</h4>
+                    <p>Maintain competitive pricing while realizing higher profit margins</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📦 Consignment Model</h4>
+                    <p>Zamzam retains ownership until sold, minimizing financial risk</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Conclusion & Next Steps -->
+        <div class="slide">
+            <h1>Partnership for Success</h1>
+            <div class="highlight-box">
+                <h2>Integrated Strategic Model</h2>
+                <ul>
+                    <li>Regional representation and regulatory support</li>
+                    <li>Warehousing and mixed pallet distribution</li>
+                    <li>Proven, low-risk pathway to sustainable market growth</li>
+                </ul>
+            </div>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Our Commitment</h3>
+                    <p>Al Abed Inc. is committed to being your strategic partner in building Karam brand's success in the U.S. market.</p>
+                </div>
+                <div>
+                    <h3>Next Steps</h3>
+                    <p>We're confident this collaboration will deliver long-term value and look forward to discussing implementation details.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <h2 style="color: #DC143C; border: none; padding: 0;">Thank You</h2>
+                <p style="font-size: 1.2em; margin-top: 20px;">Questions & Discussion</p>
+            </div>
+        </div>
     </div>
 
     <div class="controls">
@@ -269,6 +476,7 @@
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
             slides[index].classList.add('active');
+            
             document.getElementById('currentSlide').textContent = index + 1;
             document.getElementById('prevBtn').disabled = index === 0;
             document.getElementById('nextBtn').disabled = index === totalSlides - 1;
@@ -281,11 +489,13 @@
             showSlide(currentSlideIndex);
         }
 
+        // Keyboard navigation
         document.addEventListener('keydown', function(event) {
             if (event.key === 'ArrowLeft') changeSlide(-1);
             if (event.key === 'ArrowRight') changeSlide(1);
         });
 
+        // Initialize
         showSlide(0);
     </script>
 </body>
